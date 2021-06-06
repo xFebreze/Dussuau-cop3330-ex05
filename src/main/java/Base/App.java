@@ -36,8 +36,28 @@ Implement this program as a GUI program that automatically updates the values wh
  */
 public class App {
     public static void main(String[] args){
-        
+        //scanner
+        Scanner input = new Scanner(System.in);
 
+        //inputs
+        System.out.print("What is the first number? ");
+        String stringX = input.nextLine();
+        System.out.print("What is the second number? ");
+        String stringY = input.nextLine();
+
+        //parsing
+        int x = Integer.parseInt(stringX);
+        int y = Integer.parseInt(stringY);
+
+        //math
+        int add = x+y;
+        int sub = x-y;
+        int multi = x*y;
+        int divide = x/y;
+
+        //output
+        System.out.printf("%d + %d = %d \n%d - %d = %d \n%d * %d = %d \n%d / %d = %d"
+                         ,x,y,add,x,y,sub,x,y,multi,x,y,divide);
 
     }
 }
